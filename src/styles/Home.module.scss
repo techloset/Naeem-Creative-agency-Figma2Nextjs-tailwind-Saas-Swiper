@@ -1,0 +1,43 @@
+.bgHero {
+  background: url(../assests/images/bg-hero-section.png) no-repeat;
+  background-size: 100%;
+}
+.bgService {
+  background: url(../assests/images/bg-global.png) no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+.bgDocSec {
+  background: url(../assests/images/bg-doc-section.png) no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+.bgWorkSpaceSec {
+  background: url(../assests/images/bg-workspace.png) no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+.bgFAQsec {
+  background: url(../assests/images/bg-FAQ-section.png) no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+
+@media only screen and (max-width: 1023px) {
+  .bgHero,
+  .bgService {
+    background: url(../assests/images/sm-bg-hero-section.png) no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+  }
+  .bgService {
+    background: url(../assests/images/bg-global.png);
+    background-size: 100%;
+    background-position: bottom;
+  }
+  .bgfaqGroup {
+    background: url(../assests/images/sm-bg-hero-section.png) no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+  }
+}
