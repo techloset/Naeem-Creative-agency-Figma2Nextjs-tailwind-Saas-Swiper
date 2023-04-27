@@ -42,7 +42,7 @@ const Footer = () => {
                       type="email"
                       placeholder="Email"
                       maxLength={100}
-                      className="py-5 pl-7 pr-14 rounded-[11px] text-lg sm:w-[500px] w-auto"
+                      className="py-5 pl-7 pr-14 rounded-[11px] text-lg sm:w-[500px] w-full mx-3"
                     />
                     <Image
                       src={sendIcon}
@@ -93,10 +93,10 @@ const Footer = () => {
               </div>
             </div>
             {/* emty div for underliene */}
-            <div className="border-2 mb-8"></div>
+            <div className="border-2 mb-16 lg:mb-8"></div>
             {/* copy right section */}
-            <div className="flex lg:flex-row mx-3 space-y-8 flex-col justify-between pb-[68px] text-base font-medium items-baseline">
-              <p>© 2021 Creative Agency</p>
+            <div className="flex lg:flex-row mx-3 space-y-8  flex-col justify-center lg:justify-between pb-[68px] text-base font-medium items-center">
+              <p className="lg:mt-5">© 2021 Creative Agency</p>
               <ul className="flex space-x-4 lg:space-x-9">
                 <li>
                   <Link href={"#"}>Home</Link>

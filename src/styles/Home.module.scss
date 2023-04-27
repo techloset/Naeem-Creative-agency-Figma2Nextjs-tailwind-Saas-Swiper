@@ -41,3 +41,11 @@
     background-position: bottom;
   }
 }
+
+@media only screen and (max-width: 550px) {
+  .bgFAQsec {
+    background: url(../assests/images/sm-bg-FAQ-section.png) no-repeat;
+    background-size: 100%;
+    background-position: top;
+  }
+}

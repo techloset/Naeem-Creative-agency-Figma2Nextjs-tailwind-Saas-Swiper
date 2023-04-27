@@ -242,7 +242,7 @@ const Home = () => {
             </p>
             {/* list-image tailwindcss class not working */}
             <ul
-              className={`list-outside list-image-[url(checkmark.png)] dark:text-white space-y-4 text-exact-gray text-lg`}
+              className={`list-outside dark:text-white space-y-4 text-exact-gray text-lg`}
             >
               <ListIcon content="Provide idea support from our creative team" />
               <ListIcon content="Provide attractive and professional design services" />
@@ -309,7 +309,46 @@ const Home = () => {
           heading="Some of the companies we have worked with"
         />
         <div className=" md:pt-10 pb-20 lg:pb-[200px] space-y-11">
-          <div className="lg:flex items-center lg:justify-between space-y-11 lg:space-y-0 grid justify-center">
+          <div
+            className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 sm:justify-between mx-3 
+            justify-around
+       lg:gap-y-[60px] lg:gap-x-20 md:gap-x-36 gap-x-auto
+           space-y-11 lg:space-y-0"
+          >
+            <div className="grid items-end justify-center">
+              <Image src={logo1} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo2} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo3} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo4} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo5} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo6} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo7} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo8} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo9} alt="image not found" />
+            </div>
+            <div className="grid justify-center">
+              <Image src={logo10} alt="image not found" />
+            </div>
+          </div>
+          {/* <div className="lg:flex items-center lg:justify-between space-y-11 lg:space-y-0 grid justify-center">
+          </div> */}
+          {/* <div className="lg:flex items-center lg:justify-between space-y-11 lg:space-y-0 grid justify-center">
             <Image src={logo1} alt="image not found" />
             <Image src={logo2} alt="image not found" />
             <Image src={logo3} alt="image not found" />
@@ -322,7 +361,7 @@ const Home = () => {
             <Image src={logo8} alt="image not found" />
             <Image src={logo9} alt="image not found" />
             <Image src={logo10} alt="image not found" />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="bg-exact-orange dark:bg-[#020E2D] py-24 px-3 md:px-0">
@@ -359,7 +398,7 @@ const Home = () => {
                           : "border-none"
                       }`}
                     >
-                      <h1 className="dark:text-white">{item.q}</h1>
+                      <h1 className="dark:text-white text-sm lg:text-base">{item.q}</h1>
                       <Image
                         className={`w-3 h-3 ml-4 filter dark:invert cursor-pointer ${
                           isActive?.indexOf(item.uid) > -1 ? "rotate-180" : ""
@@ -373,7 +412,7 @@ const Home = () => {
                         isActive?.indexOf(item.uid) > -1 ? "block" : "hidden"
                       } `}
                     >
-                      <p className="text-exact-gray dark:text-white/75">
+                      <p className="text-exact-gray text-sm lg:text-base dark:text-white/75">
                         {item.ans}
                       </p>
                     </div>
