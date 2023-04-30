@@ -334,7 +334,7 @@ const Home = () => {
         />
         <div className=" md:pt-10 pb-20 lg:pb-[200px] space-y-11">
           <div
-            className="grid grid-cols-1 md:grid-cols-3 lg:-mt-10 lg:grid-cols-5 sm:justify-between mx-3 
+            className="grid grid-cols-1 md:grid-cols-3 md:-mt-20 lg:-mt-10 lg:grid-cols-5 sm:justify-between mx-3 
             justify-around
        lg:gap-y-[60px] lg:gap-x-20 md:gap-x-36 gap-x-auto
            space-y-11 lg:space-y-0"
