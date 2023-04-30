@@ -97,7 +97,7 @@ const Navbar = () => {
           <button
             className={`text-base w-full ${
               !openMenu ? "invisible md:visible" : "visible"
-            } md:max-w-fit py-5 px-9 bg-exact-purple rounded-lg text-white`}
+            } md:max-w-fit leading-[26px] font-semibold md:shadow-[-5px_10px_30px_rgba(76,64,247,0.5)] py-[19px] px-[35px] bg-exact-purple rounded-xl text-white`}
           >
             Contact us
           </button>

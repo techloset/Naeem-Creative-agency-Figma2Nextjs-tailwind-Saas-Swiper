@@ -1,4 +1,3 @@
-import styles from "./Footer.module.scss";
 import sendIcon from "../../assests/images/send-icon.png";
 import logo from "../../assests/images/logo.png";
 import liveLocation from "../../assests/images/location-map.png";
@@ -6,26 +5,44 @@ import fb from "../../assests/images/fb.png";
 import instagram from "../../assests/images/instagram.png";
 import linkedin from "../../assests/images/linkedin.png";
 import twitter from "../../assests/images/twitter.png";
+import curve from "../../assests/images/curve.png";
+import rightErrow from "../../assests/images/rightErrow.png";
+
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
-      <div className={`topSection ${styles.bgfooterSection} dark:bg-[#00113B]`}>
+      <div className={`topSection relative dark:bg-[#00113B]`}>
+        <Image
+          src={curve}
+          alt="curve"
+          className="w-full absolute top-44 -z-40"
+        />
         <div className="container mx-auto py-24 lg:py-[200px]">
           <div className="rounded-[20px] mx-3 text-white bg-exact-yellow text-center py-16">
             <p className="pb-4 text-base font-medium">Are You Ready For</p>
             <h1 className="pb-8 text-[42px]">Start a New Project</h1>
             <div className="flex justify-center">
               <button
-                className={`shadow-2xl shadow-exact-red/50 text-base md:max-w-fit py-5 px-9 bg-exact-purple rounded-lg text-white hover:bg-exact-purple/75`}
+                className={`shadow-2xl shadow-exact-red/50 md:max-w-fit py-[19px] px-[42.5px] bg-[#4C40F7] rounded-xl `}
               >
-                Start Now &#8594;
+                <span className="flex items-baseline">
+                  <p className="text-base font-semibold leading-[26px] text-white">
+                    Start Now
+                  </p>
+                  <Image
+                    src={rightErrow}
+                    alt="icon"
+                    className="w-[20px] h-[14px] ml-4"
+                  />
+                </span>
               </button>
             </div>
           </div>
         </div>
+
         {/* Footer core section */}
         <div className="bg-[#00113B] mt-40">
           <div className="container text-white mx-auto relative pt-40">
@@ -93,7 +110,7 @@ const Footer = () => {
               </div>
             </div>
             {/* emty div for underliene */}
-            <div className="border-2 mb-16 lg:mb-8"></div>
+            <div className="border-[1px] mb-16 lg:mb-8"></div>
             {/* copy right section */}
             <div className="flex lg:flex-row mx-3 space-y-8  flex-col justify-center lg:justify-between pb-[68px] text-base font-medium items-center">
               <p className="lg:mt-5">© 2021 Creative Agency</p>

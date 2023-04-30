@@ -15,9 +15,13 @@ import logo4 from "../assests/images/customer-logos/hubSpot.png";
 import logo5 from "../assests/images/customer-logos/jQuery.png";
 import logo6 from "../assests/images/customer-logos/canon.png";
 import logo7 from "../assests/images/customer-logos/fedex.png";
+import rightErrow from "../assests/images/rightErrow.png";
 import logo8 from "../assests/images/customer-logos/bitcoin.png";
 import logo9 from "../assests/images/customer-logos/pirelli.png";
 import logo10 from "../assests/images/customer-logos/philips.png";
+import curve from "../assests/images/curve.png";
+import bgHeroSec from "../assests/images/bg-hero-section.png";
+import bgService from "../assests/images/bg-global.png";
 import Image from "next/image";
 import SectionHeader from "@/components/sectionHeader/SectionHeading";
 import { serviceCardData } from "@/contents/serviceCardData";
@@ -59,27 +63,40 @@ const Home = () => {
       </Head>
       {/* hero Section */}
       <div
-        className={`heroSection ${styles.bgHero} bg-bottom lg:h-screen bg-no-repeat lg:bg-none`}
+        className={`heroSection bg-bottom pb-[100px] lg:pb-[200px] bg-no-repeat lg:bg-none`}
       >
+        <div className="absolute right-0 w-fit invisible lg:visible">
+          <Image src={bgHeroSec} alt="bgHeroSec" />
+        </div>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 px-3">
             <div className="space-y-6 xl:mt-28 my-20 dark:text-white">
-              <h1 className="text-4xl xl:text-6xl lg:text-5xl">
+              <h1 className="text-4xl tracking-[-2.5px] lg:max-w-[570px] xl:text-6xl lg:text-[56px] lg:leading-[72px] font-semibold">
                 Make your business
-                <span className="text-exact-orange lg:block dark:text-exact-yellow">
-                  more powerful
-                </span>
+                <span className="text-exact-orange dark:text-exact-yellow">
+                  {" "}more powerful{" "}
+                </span><br/>
                 with us
               </h1>
-              <p className="text-lg font-normal lg:max-w-[70%] text-exact-gray">
+              <p className="text-lg leading-[32px] lg:max-w-[365px] font-normal text-exact-gray">
                 We provide various services to make your business grow and get
                 bigger. Your satisfaction is our first priority.
-              </p>
-              <button
-                className={`text-base md:max-w-fit py-5 px-9 bg-exact-purple rounded-lg text-white`}
-              >
-                Get Started &#8594;
-              </button>
+              </p>            
+            <button
+            className={`w-fit shadow-[-5px_10px_30px_rgba(76,64,247,0.5)] py-[19px] px-[35px] bg-exact-purple rounded-xl`}
+          >
+            <span className="flex items-baseline">
+                  <p className="text-base font-semibold leading-[26px] text-white">
+                  Get Started
+                  </p>
+                  <Image
+                    src={rightErrow}
+                    alt="icon"
+                    className="w-[20px] h-[14px] ml-4"
+                  />
+                </span>
+          </button>
+            
             </div>
             <div className="order-first lg:order-none">
               <Image src={heroImage} className="lg:invisible" alt="heroImage" />
@@ -89,23 +106,26 @@ const Home = () => {
       </div>
 
       {/* services section */}
-      <div className={`servicesSection ${styles.bgService} bg-bottom mb-10`}>
+      <div
+        className={`servicesSection relative pb-[100px] lg:pb-[200px] -mt-16 bg-no-repeat bg-bottom`}
+      >
+        <div className="absolute right-0 -z-40 bottom-24">
+          <Image src={bgService} alt="bgService" className="w-[15000]" />
+        </div>
         <div className={`container mx-auto`}>
           <SectionHeader
             title="Our Services"
             heading="The various services we provide to make your business more powerful"
           />
-          <div className="serviceCard grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center text-center gap-x-8 gap-y-16 px-3">
+          <div className="serviceCard grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center text-center gap-x-8 gap-y-[60px] px-3">
             {serviceCardData.map((cardData, index) => {
               const { svgIcon, title, desc, exactColor } = cardData;
-
               const isStylish = stylish === index;
-
               return (
                 <div
                   key={index}
                   onMouseEnter={() => setStylish(index)}
-                  className={`card py-11 px-[30px] shadow-2xl dark:shadow-blue-900/50 space-y-11 w-fit flex flex-col rounded-2xl items-center ${
+                  className={`card py-11 px-[30px] shadow-2xl dark:shadow-blue-900/50 space-y-11 w-full flex flex-col rounded-2xl items-center ${
                     isStylish ? `bg-${exactColor} shadow-${exactColor}` : ""
                   }`}
                 >
@@ -127,30 +147,30 @@ const Home = () => {
                   </div>
                   <div className="info space-y-4">
                     <h3
-                      className={`dark:text-white text-xl ${
+                      className={`dark:text-white text-xl font-semibold ${
                         isStylish ? "text-white" : "text-black"
                       }`}
                     >
                       {title}
                     </h3>
                     <p
-                      className={`dark:text-white text-lg font-normal ${
-                        isStylish ? "text-white" : "text-exact-gray"
+                      className={`dark:text-white lg:max-w-[292px] text-lg leading-[32px] font-normal ${
+                        isStylish ? "text-white" : "text-[#6B6B6B]                          "
                       }`}
                     >
                       {desc}
                     </p>
                   </div>
-                  <Link href="/">
+                  <Link href="#">
                     <div
-                      className={`dark:bg-[#020E2D] p-4 rounded-full hover:relative hover:left-1 hover:bg-[#F3F4F6] dark:fill-blue-600 fill-blue-600 ${
+                      className={`dark:bg-[#020E2D] p-[17px] rounded-full hover:relative hover:left-1 hover:bg-[#F3F4F6] dark:fill-blue-600 fill-blue-600 ${
                         isStylish
                           ? `bg-white ${`fill-${exactColor}`} dark:bg-white/100 ${`dark:fill-${exactColor}`}`
                           : "bg-[#F3F4F6]"
                       } `}
                     >
                       <svg
-                        className="font-bold w-[12px] h-[12px]"
+                        className="font-bold w-[11px] h-[11px]"
                         width="12.000000pt"
                         height="12.000000pt"
                         viewBox="0 0 12.000000 12.000000"
@@ -169,39 +189,36 @@ const Home = () => {
         </div>
       </div>
       {/* Documentation section */}
-      <div className={`docSec mt-20 lg:mt-40`}>
-        <div className={`container mx-auto`}>
-          <SectionHeader
-            title="Our Documentation"
-            heading="See what our profile is like and how we work for your business"
-          />
-        </div>
-        <div
-          className={`serviceCard ${styles.bgDocSec} grid grid-cols-1 justify-center px-3`}
-        >
-          <div className="flex justify-center container mx-auto">
-            {thumnail ? (
-              <div
-                className="cursor-pointer"
-                onClick={() => setThumnail(false)}
-              >
-                <Image src={thumnailImg} alt="image not found" width={15000} />
-              </div>
-            ) : (
-              <div className="w-full cursor-pointer">
-                <iframe
-                  className={`w-full aspect-video ${
-                    thumnail ? "hidden" : "block"
-                  } rounded-[20px] mb-16 lg:mb-20`}
-                  src="https://www.youtube.com/embed/TGzMSOhdNtQ?autoplay=1&mute=1"
-                ></iframe>
-              </div>
-            )}
-          </div>
+
+      <div className={`docSec container mx-auto`}>
+        <SectionHeader
+          title="Our Documentation"
+          heading="See what our profile is like and how we work for your business"
+        />
+      </div>
+      <div
+        className={`ratingCard ${styles.bgDocSec} grid grid-cols-1 justify-center px-3`}
+      >
+        <div className="flex justify-center container mx-auto">
+          {thumnail ? (
+            <div className="cursor-pointer" onClick={() => setThumnail(false)}>
+              <Image src={thumnailImg} alt="image not found" width={15000} />
+            </div>
+          ) : (
+            <div className="w-full cursor-pointer">
+              <iframe
+                className={`w-full aspect-video ${
+                  thumnail ? "hidden" : "block"
+                } rounded-[20px] mb-16 lg:mb-20`}
+                src="https://www.youtube.com/embed/TGzMSOhdNtQ?autoplay=1&mute=1"
+              ></iframe>
+            </div>
+          )}
         </div>
       </div>
+
       {/* Customer section */}
-      <div className="customerSec bg-[#F9F9FD] dark:bg-[#020E2D] py-24">
+      <div className="customerSec mb-[100px] lg:mb-[200px] bg-[#F9F9FD] dark:bg-[#020E2D] py-24">
         <div
           className={`container mx-auto gap-10 grid grid-col-1 lg:grid-cols-2 justify-center items-center`}
         >
@@ -231,8 +248,11 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="space-y-9 mx-3">
-            <h1 className="text-3xl dark:text-white md:text-5xl lg:text-[56px]">
+          <div className="grid justify-center lg:justify-end">
+
+        
+          <div className="space-y-9 max-w-[460px] mx-3">
+            <h1 className="text-3xl text-[#111029] dark:text-white md:text-5xl lg:text-[56px] lg:leading-[72px] font-semibold">
               Customer satisfaction is our first priority
             </h1>
             <p className="text-lg dark:text-white text-exact-gray">
@@ -251,126 +271,114 @@ const Home = () => {
               <ListIcon content="Provide support to market products through online marketplace" />
             </ul>
           </div>
+          </div>
         </div>
       </div>
-      {/* Worke space section */}
-      <div className={`servicesSection bg-bottom ${styles.bgWorkSpaceSec}`}>
-        <div className={`container mx-auto pt-16 md:pt-40`}>
+      {/* Working space section */}
+      <div className={`servicesSection lg:pb-[200px] pb-[100px] bg-bottom`}>
+        <div className={`container mx-auto`}>
           <SectionHeader
             title="Working space"
             heading="Let’s meet our interior room decoration"
           />
         </div>
-        <div className={`mx-4 mt-10`}>
-          <div className="container mx-auto gap-8 grid grid-cols-1 md:grid-cols-3">
-            <div className="space-y-8">
-              <Image
-                src={roomImage1}
-                className="w-full"
-                alt="image not found"
-              />
-              <Image
-                src={roomImage5}
-                className="w-full"
-                alt="image not found"
-              />
-            </div>
-            <div className="space-y-8">
-              <Image
-                src={roomImage4}
-                className="w-full"
-                alt="image not found"
-              />
-              <Image
-                src={roomImage3}
-                className="w-full"
-                alt="image not found"
-              />
-            </div>
-            <div className="space-y-8">
-              <Image
-                src={roomImage2}
-                className="w-full"
-                alt="image not found"
-              />
-              <Image
-                src={roomImage6}
-                className="w-full"
-                alt="image not found"
-              />
+        <div className="relative">
+          <Image src={curve} alt="curve" className="w-full absolute -z-40" />
+          <div className={`mx-3 mt-10`}>
+            <div className="container mx-auto gap-8 grid grid-cols-1 md:grid-cols-3">
+              <div className="space-y-8">
+                <Image
+                  src={roomImage1}
+                  className="w-full"
+                  alt="image not found"
+                />
+                <Image
+                  src={roomImage5}
+                  className="w-full"
+                  alt="image not found"
+                />
+              </div>
+              <div className="space-y-8">
+                <Image
+                  src={roomImage4}
+                  className="w-full"
+                  alt="image not found"
+                />
+                <Image
+                  src={roomImage3}
+                  className="w-full"
+                  alt="image not found"
+                />
+              </div>
+              <div className="space-y-8">
+                <Image
+                  src={roomImage2}
+                  className="w-full"
+                  alt="image not found"
+                />
+                <Image
+                  src={roomImage6}
+                  className="w-full"
+                  alt="image not found"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
       {/* Customer section */}
-      <div className={`customersSec container mx-auto lg:pt-40 pt-16`}>
+      <div className={`customersSec container mx-auto`}>
         <SectionHeader
           title="Some of Our Great Customers"
           heading="Some of the companies we have worked with"
         />
         <div className=" md:pt-10 pb-20 lg:pb-[200px] space-y-11">
           <div
-            className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 sm:justify-between mx-3 
+            className="grid grid-cols-1 md:grid-cols-3 lg:-mt-10 lg:grid-cols-5 sm:justify-between mx-3 
             justify-around
        lg:gap-y-[60px] lg:gap-x-20 md:gap-x-36 gap-x-auto
            space-y-11 lg:space-y-0"
           >
-            <div className="grid items-end justify-center">
+            <div className="grid items-end md:justify-start justify-center">
               <Image src={logo1} alt="image not found" />
             </div>
             <div className="grid justify-center">
               <Image src={logo2} alt="image not found" />
             </div>
-            <div className="grid justify-center">
+            <div className="grid justify-center md:justify-end">
               <Image src={logo3} alt="image not found" />
             </div>
-            <div className="grid justify-center">
+            <div className="grid justify-center md:justify-start">
               <Image src={logo4} alt="image not found" />
             </div>
-            <div className="grid justify-center">
+            <div className="grid justify-center lg:justify-end">
               <Image src={logo5} alt="image not found" />
             </div>
-            <div className="grid justify-center">
+            <div className="grid justify-center lg:justify-start md:justify-end">
               <Image src={logo6} alt="image not found" />
             </div>
-            <div className="grid justify-center">
+            <div className="grid justify-center md:justify-start">
               <Image src={logo7} alt="image not found" />
             </div>
             <div className="grid justify-center">
               <Image src={logo8} alt="image not found" />
             </div>
-            <div className="grid justify-center">
+            <div className="grid justify-center md:justify-end">
               <Image src={logo9} alt="image not found" />
             </div>
-            <div className="grid justify-center">
+            <div className="grid justify-center lg:justify-end">
               <Image src={logo10} alt="image not found" />
             </div>
           </div>
-          {/* <div className="lg:flex items-center lg:justify-between space-y-11 lg:space-y-0 grid justify-center">
-          </div> */}
-          {/* <div className="lg:flex items-center lg:justify-between space-y-11 lg:space-y-0 grid justify-center">
-            <Image src={logo1} alt="image not found" />
-            <Image src={logo2} alt="image not found" />
-            <Image src={logo3} alt="image not found" />
-            <Image src={logo4} alt="image not found" />
-            <Image src={logo5} alt="image not found" />
-          </div>
-          <div className="lg:flex items-center lg:justify-between space-y-11 lg:space-y-0 grid justify-center">
-            <Image src={logo6} alt="image not found" />
-            <Image src={logo7} alt="image not found" />
-            <Image src={logo8} alt="image not found" />
-            <Image src={logo9} alt="image not found" />
-            <Image src={logo10} alt="image not found" />
-          </div> */}
         </div>
       </div>
-      <div className="bg-exact-orange dark:bg-[#020E2D] py-24 px-3 md:px-0">
+      <div className="bg-[#FE9602] dark:bg-[#020E2D] py-[100px] px-3 md:px-0">
         <SwiperSlider />
       </div>
       {/* FAQ section */}
       <div className={`customersSec ${styles.bgFAQsec}`}>
         <div className={`${styles.bgfaqGroup} bg-bottom`}>
-          <div className={`container  mx-auto lg:pt-40 pt-16`}>
+          <div className={`container  mx-auto lg:pt-[200px] pt-[100px]`}>
             <SectionHeader
               title="Frequently Ask Question"
               heading="Some of our frequently asked questions"
@@ -394,11 +402,13 @@ const Home = () => {
                       onClick={() => accordionDropdown(item)}
                       className={`question flex cursor-pointer justify-between items-center ${
                         isActive?.indexOf(item.uid) > -1
-                          ? "border-b-2 pb-7"
+                          ? "border-b-[1px] pb-7"
                           : "border-none"
                       }`}
                     >
-                      <h1 className="dark:text-white text-sm lg:text-base">{item.q}</h1>
+                      <h1 className="dark:text-white text-sm lg:text-base">
+                        {item.q}
+                      </h1>
                       <Image
                         className={`w-3 h-3 ml-4 filter dark:invert cursor-pointer ${
                           isActive?.indexOf(item.uid) > -1 ? "rotate-180" : ""
@@ -412,7 +422,7 @@ const Home = () => {
                         isActive?.indexOf(item.uid) > -1 ? "block" : "hidden"
                       } `}
                     >
-                      <p className="text-exact-gray text-sm lg:text-base dark:text-white/75">
+                      <p className="text-[#6B6B6B] text-sm lg:text-base dark:text-white/75">
                         {item.ans}
                       </p>
                     </div>

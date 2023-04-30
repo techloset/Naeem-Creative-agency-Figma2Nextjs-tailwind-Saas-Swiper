@@ -18,7 +18,7 @@ export const testimonialsData = [
     name: "Guy Hawkins",
     company: "Paypal inc.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    rating: 4,
+    rating: 5,
   },
   {
     imgURL: Kristin,
@@ -32,7 +32,7 @@ export const testimonialsData = [
     name: "Robert Fox",
     company: "Facebook inc.",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    rating: 4,
+    rating: 5,
   },
   {
     imgURL: Savannah,
