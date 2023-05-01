@@ -54,7 +54,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Dashboard</title>
+        <title>Creative Agency</title>
         <meta name="keywords" content="creative agency, web app" />
         <meta
           name="description"
@@ -74,20 +74,22 @@ const Home = () => {
               <h1 className="text-4xl tracking-[-2.5px] lg:max-w-[570px] xl:text-6xl lg:text-[56px] lg:leading-[72px] font-semibold">
                 Make your business
                 <span className="text-exact-orange dark:text-exact-yellow">
-                  {" "}more powerful{" "}
-                </span><br/>
+                  {" "}
+                  more powerful{" "}
+                </span>
+                <br />
                 with us
               </h1>
               <p className="text-lg leading-[32px] lg:max-w-[365px] font-normal text-exact-gray">
                 We provide various services to make your business grow and get
                 bigger. Your satisfaction is our first priority.
-              </p>            
-            <button
-            className={`w-fit shadow-[-5px_10px_30px_rgba(76,64,247,0.5)] py-[19px] px-[35px] bg-exact-purple rounded-xl`}
-          >
-            <span className="flex items-baseline">
+              </p>
+              <button
+                className={`w-fit shadow-[-5px_10px_30px_rgba(76,64,247,0.5)] py-[19px] px-[35px] bg-exact-purple rounded-xl`}
+              >
+                <span className="flex items-baseline">
                   <p className="text-base font-semibold leading-[26px] text-white">
-                  Get Started
+                    Get Started
                   </p>
                   <Image
                     src={rightErrow}
@@ -95,8 +97,7 @@ const Home = () => {
                     className="w-[20px] h-[14px] ml-4"
                   />
                 </span>
-          </button>
-            
+              </button>
             </div>
             <div className="order-first lg:order-none">
               <Image src={heroImage} className="lg:invisible" alt="heroImage" />
@@ -105,12 +106,12 @@ const Home = () => {
         </div>
       </div>
 
-      {/* services section */}
+      {/* service section */}
       <div
         className={`servicesSection relative pb-[100px] lg:pb-[200px] -mt-16 bg-no-repeat bg-bottom`}
       >
         <div className="absolute right-0 -z-40 bottom-24">
-          <Image src={bgService} alt="bgService" className="w-[15000]" />
+          <Image src={bgService} alt="bgService" className="w-[15000] z-40" />
         </div>
         <div className={`container mx-auto`}>
           <SectionHeader
@@ -122,66 +123,72 @@ const Home = () => {
               const { svgIcon, title, desc, exactColor } = cardData;
               const isStylish = stylish === index;
               return (
-                <div
-                  key={index}
-                  onMouseEnter={() => setStylish(index)}
-                  className={`card py-11 px-[30px] shadow-2xl dark:shadow-blue-900/50 space-y-11 w-full flex flex-col rounded-2xl items-center ${
-                    isStylish ? `bg-${exactColor} shadow-${exactColor}` : ""
-                  }`}
-                >
+                <div key={index} className="flex justify-center">
                   <div
-                    className={`p-8 shadow-xl ${`shadow-${exactColor}/50`} ${
-                      isStylish
-                        ? "bg-white shadow-gray-800/50"
-                        : `bg-${exactColor}`
-                    } rounded-full`}
+                    onMouseEnter={() => setStylish(index)}
+                    className={`card self-center py-11 px-[30px] shadow-2xl dark:shadow-blue-900/50 
+                  space-y-11 max-w-[352px] flex flex-col rounded-2xl items-center ${
+                    isStylish
+                      ? `bg-${exactColor} shadow-${exactColor}`
+                      : "bg-white"
+                  }`}
                   >
-                    <svg
-                      className={`${
-                        isStylish ? `fill-${exactColor}` : "fill-white"
-                      } w-[33px] h-[33px]`}
-                      viewBox="0 0 33 33"
-                    >
-                      {svgIcon}
-                    </svg>
-                  </div>
-                  <div className="info space-y-4">
-                    <h3
-                      className={`dark:text-white text-xl font-semibold ${
-                        isStylish ? "text-white" : "text-black"
-                      }`}
-                    >
-                      {title}
-                    </h3>
-                    <p
-                      className={`dark:text-white lg:max-w-[292px] text-lg leading-[32px] font-normal ${
-                        isStylish ? "text-white" : "text-[#6B6B6B]                          "
-                      }`}
-                    >
-                      {desc}
-                    </p>
-                  </div>
-                  <Link href="#">
                     <div
-                      className={`dark:bg-[#020E2D] p-[17px] rounded-full hover:relative hover:left-1 hover:bg-[#F3F4F6] dark:fill-blue-600 fill-blue-600 ${
+                      className={`p-8 shadow-xl ${`shadow-${exactColor}/50`} ${
                         isStylish
-                          ? `bg-white ${`fill-${exactColor}`} dark:bg-white/100 ${`dark:fill-${exactColor}`}`
-                          : "bg-[#F3F4F6]"
-                      } `}
+                          ? "bg-white shadow-gray-800/50"
+                          : `bg-${exactColor}`
+                      } rounded-full`}
                     >
                       <svg
-                        className="font-bold w-[11px] h-[11px]"
-                        width="12.000000pt"
-                        height="12.000000pt"
-                        viewBox="0 0 12.000000 12.000000"
-                        preserveAspectRatio="xMidYMid meet"
+                        className={`${
+                          isStylish ? `fill-${exactColor}` : "fill-white"
+                        } w-[33px] h-[33px]`}
+                        viewBox="0 0 33 33"
                       >
-                        <g transform="translate(0.000000,12.000000) scale(0.100000,-0.100000)">
-                          <path d="M65 90 c18 -20 17 -20 -18 -20 -21 0 -37 -4 -37 -10 0 -5 16 -10 37 -10 35 0 36 0 18 -20 -26 -29 -3 -24 25 5 l23 25 -23 25 c-28 29 -51 34 -25 5z" />
-                        </g>
+                        {svgIcon}
                       </svg>
                     </div>
-                  </Link>
+                    <div className="info space-y-4">
+                      <h3
+                        className={`dark:text-white text-xl font-semibold ${
+                          isStylish ? "text-white" : "text-black"
+                        }`}
+                      >
+                        {title}
+                      </h3>
+                      <p
+                        className={`dark:text-white lg:max-w-[292px] text-lg leading-[32px] font-normal ${
+                          isStylish
+                            ? "text-white"
+                            : "text-[#6B6B6B]                          "
+                        }`}
+                      >
+                        {desc}
+                      </p>
+                    </div>
+                    <Link href="#">
+                      <div
+                        className={`dark:bg-[#020E2D] p-[17px] rounded-full hover:relative hover:left-1 hover:bg-[#F3F4F6] dark:fill-blue-600 fill-blue-600 ${
+                          isStylish
+                            ? `bg-white ${`fill-${exactColor}`} dark:bg-white/100 ${`dark:fill-${exactColor}`}`
+                            : "bg-[#F3F4F6]"
+                        } `}
+                      >
+                        <svg
+                          className="font-bold w-[11px] h-[11px]"
+                          width="12.000000pt"
+                          height="12.000000pt"
+                          viewBox="0 0 12.000000 12.000000"
+                          preserveAspectRatio="xMidYMid meet"
+                        >
+                          <g transform="translate(0.000000,12.000000) scale(0.100000,-0.100000)">
+                            <path d="M65 90 c18 -20 17 -20 -18 -20 -21 0 -37 -4 -37 -10 0 -5 16 -10 37 -10 35 0 36 0 18 -20 -26 -29 -3 -24 25 5 l23 25 -23 25 c-28 29 -51 34 -25 5z" />
+                          </g>
+                        </svg>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               );
             })}
@@ -249,28 +256,26 @@ const Home = () => {
             </div>
           </div>
           <div className="grid justify-center lg:justify-end">
-
-        
-          <div className="space-y-9 max-w-[460px] mx-3">
-            <h1 className="text-3xl text-[#111029] dark:text-white md:text-5xl lg:text-[56px] lg:leading-[72px] font-semibold">
-              Customer satisfaction is our first priority
-            </h1>
-            <p className="text-lg dark:text-white text-exact-gray">
-              We serve many customers, ranging from small businesses, medium
-              entrepreneurs, to world-renowned companies. Their satisfaction is
-              our pleasure. We strive to provide the best service by:
-            </p>
-            {/* list-image tailwindcss class not working */}
-            <ul
-              className={`list-outside dark:text-white space-y-4 text-exact-gray text-lg`}
-            >
-              <ListIcon content="Provide idea support from our creative team" />
-              <ListIcon content="Provide attractive and professional design services" />
-              <ListIcon content="Support for service 24 hours a week" />
-              <ListIcon content="Helping our customers to grow their business" />
-              <ListIcon content="Provide support to market products through online marketplace" />
-            </ul>
-          </div>
+            <div className="space-y-9 max-w-[460px] mx-3">
+              <h1 className="text-3xl text-[#111029] dark:text-white md:text-5xl lg:text-[56px] lg:leading-[72px] font-semibold">
+                Customer satisfaction is our first priority
+              </h1>
+              <p className="text-lg dark:text-white text-exact-gray">
+                We serve many customers, ranging from small businesses, medium
+                entrepreneurs, to world-renowned companies. Their satisfaction
+                is our pleasure. We strive to provide the best service by:
+              </p>
+              {/* list-image tailwindcss class not working */}
+              <ul
+                className={`list-outside dark:text-white space-y-4 text-exact-gray text-lg`}
+              >
+                <ListIcon content="Provide idea support from our creative team" />
+                <ListIcon content="Provide attractive and professional design services" />
+                <ListIcon content="Support for service 24 hours a week" />
+                <ListIcon content="Helping our customers to grow their business" />
+                <ListIcon content="Provide support to market products through online marketplace" />
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -376,63 +381,62 @@ const Home = () => {
         <SwiperSlider />
       </div>
       {/* FAQ section */}
-      <div className={`customersSec ${styles.bgFAQsec}`}>
-        <div className={`${styles.bgfaqGroup} bg-bottom`}>
-          <div className={`container  mx-auto lg:pt-[200px] pt-[100px]`}>
-            <SectionHeader
-              title="Frequently Ask Question"
-              heading="Some of our frequently asked questions"
-            />
-            <div
-              className={`faqGroup pb-16 ${
-                isActive.length > 1
-                  ? "lg:pb-[100px]"
-                  : isActive.length == 0
-                  ? "lg:pb-[300px]"
-                  : "lg:pb-[200px]"
-              } px-2 space-y-8`}
-            >
-              {faqContent.map((item, index) => {
-                return (
+      <div className={`customersSec bg-top ${styles.bgFAQsec}`}>
+        <div className={`container  mx-auto lg:pt-[200px] pt-[100px]`}>
+          <SectionHeader
+            title="Frequently Ask Question"
+            heading="Some of our frequently asked questions"
+          />
+          <div
+            className={`faqGroup pb-16 ${
+              isActive.length > 1
+                ? "lg:pb-[100px]"
+                : isActive.length == 0
+                ? "lg:pb-[300px]"
+                : "lg:pb-[200px]"
+            } px-2 space-y-8`}
+          >
+            {faqContent.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className={`faq bg-white dark:bg-[#020E2D] p-8 rounded-lg border space-y-7 border-[#D8D8D8] hover:border-exact-purple`}
+                >
                   <div
-                    key={index}
-                    className={`faq bg-white dark:bg-[#020E2D] p-8 rounded-lg border space-y-7 border-[#D8D8D8] hover:border-exact-purple`}
+                    onClick={() => accordionDropdown(item)}
+                    className={`question flex cursor-pointer justify-between items-center ${
+                      isActive?.indexOf(item.uid) > -1
+                        ? "border-b-[1px] pb-7"
+                        : "border-none"
+                    }`}
                   >
-                    <div
-                      onClick={() => accordionDropdown(item)}
-                      className={`question flex cursor-pointer justify-between items-center ${
-                        isActive?.indexOf(item.uid) > -1
-                          ? "border-b-[1px] pb-7"
-                          : "border-none"
+                    <h1 className="dark:text-white text-sm lg:text-base">
+                      {item.q}
+                    </h1>
+                    <Image
+                      className={`w-3 h-3 ml-4 filter dark:invert cursor-pointer ${
+                        isActive?.indexOf(item.uid) > -1 ? "rotate-180" : ""
                       }`}
-                    >
-                      <h1 className="dark:text-white text-sm lg:text-base">
-                        {item.q}
-                      </h1>
-                      <Image
-                        className={`w-3 h-3 ml-4 filter dark:invert cursor-pointer ${
-                          isActive?.indexOf(item.uid) > -1 ? "rotate-180" : ""
-                        }`}
-                        src={dropdownIcon}
-                        alt="icon"
-                      />
-                    </div>
-                    <div
-                      className={`${
-                        isActive?.indexOf(item.uid) > -1 ? "block" : "hidden"
-                      } `}
-                    >
-                      <p className="text-[#6B6B6B] text-sm lg:text-base dark:text-white/75">
-                        {item.ans}
-                      </p>
-                    </div>
+                      src={dropdownIcon}
+                      alt="icon"
+                    />
                   </div>
-                );
-              })}
-            </div>
+                  <div
+                    className={`${
+                      isActive?.indexOf(item.uid) > -1 ? "block" : "hidden"
+                    } `}
+                  >
+                    <p className="text-[#6B6B6B] text-sm lg:text-base dark:text-white/75">
+                      {item.ans}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
+
       {/* Testimonials section */}
       <div
         className={`testimonialSec px-2 py-[100px] dark:bg-[#020E2D] bg-[#F9F9FD]`}
