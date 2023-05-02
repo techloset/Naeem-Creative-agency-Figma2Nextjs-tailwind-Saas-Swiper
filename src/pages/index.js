@@ -21,7 +21,7 @@ import logo9 from "../assests/images/customer-logos/pirelli.png";
 import logo10 from "../assests/images/customer-logos/philips.png";
 import curve from "../assests/images/curve.png";
 import bgHeroSec from "../assests/images/bg-hero-section.png";
-import bgService from "../assests/images/bg-global.png";
+import bgService from "../assests/images/bg-service.png";
 import Image from "next/image";
 import SectionHeader from "@/components/sectionHeader/SectionHeading";
 import { serviceCardData } from "@/contents/serviceCardData";
@@ -65,7 +65,7 @@ const Home = () => {
       <div
         className={`heroSection bg-bottom pb-[100px] lg:pb-[200px] bg-no-repeat lg:bg-none`}
       >
-        <div className="absolute right-0 w-fit invisible lg:visible">
+        <div className="absolute right-0 w-fit -z-40 invisible lg:visible">
           <Image src={bgHeroSec} alt="bgHeroSec" />
         </div>
         <div className="container mx-auto">
@@ -110,8 +110,8 @@ const Home = () => {
       <div
         className={`servicesSection relative pb-[100px] lg:pb-[200px] -mt-16 bg-no-repeat bg-bottom`}
       >
-        <div className="absolute right-0 -z-40 bottom-24">
-          <Image src={bgService} alt="bgService" className="w-[15000] z-40" />
+        <div className="absolute right-0 -z-40 -bottom-56 invisible lg:visible">
+          <Image src={bgService} alt="bgService" className="z-40" />
         </div>
         <div className={`container mx-auto`}>
           <SectionHeader
@@ -280,53 +280,63 @@ const Home = () => {
         </div>
       </div>
       {/* Working space section */}
-      <div className={`servicesSection lg:pb-[200px] pb-[100px] bg-bottom`}>
+      <div
+        className={`servicesSection relative lg:pb-[200px] pb-[100px] bg-bottom`}
+      >
+        <Image
+          src={curve}
+          alt="curve"
+          className="w-full absolute -z-40 top-56"
+        />
+        <Image
+          src={curve}
+          alt="curve"
+          className="w-full absolute -z-40 -bottom-80
+          "
+        />
         <div className={`container mx-auto`}>
           <SectionHeader
             title="Working space"
             heading="Let’s meet our interior room decoration"
           />
         </div>
-        <div className="relative">
-          <Image src={curve} alt="curve" className="w-full absolute -z-40" />
-          <div className={`mx-3 mt-10`}>
-            <div className="container mx-auto gap-8 grid grid-cols-1 md:grid-cols-3">
-              <div className="space-y-8">
-                <Image
-                  src={roomImage1}
-                  className="w-full"
-                  alt="image not found"
-                />
-                <Image
-                  src={roomImage5}
-                  className="w-full"
-                  alt="image not found"
-                />
-              </div>
-              <div className="space-y-8">
-                <Image
-                  src={roomImage4}
-                  className="w-full"
-                  alt="image not found"
-                />
-                <Image
-                  src={roomImage3}
-                  className="w-full"
-                  alt="image not found"
-                />
-              </div>
-              <div className="space-y-8">
-                <Image
-                  src={roomImage2}
-                  className="w-full"
-                  alt="image not found"
-                />
-                <Image
-                  src={roomImage6}
-                  className="w-full"
-                  alt="image not found"
-                />
-              </div>
+        <div className={`mx-3 mt-10`}>
+          <div className="container mx-auto gap-8 grid grid-cols-1 md:grid-cols-3">
+            <div className="space-y-8">
+              <Image
+                src={roomImage1}
+                className="w-full"
+                alt="image not found"
+              />
+              <Image
+                src={roomImage5}
+                className="w-full"
+                alt="image not found"
+              />
+            </div>
+            <div className="space-y-8">
+              <Image
+                src={roomImage4}
+                className="w-full"
+                alt="image not found"
+              />
+              <Image
+                src={roomImage3}
+                className="w-full"
+                alt="image not found"
+              />
+            </div>
+            <div className="space-y-8">
+              <Image
+                src={roomImage2}
+                className="w-full"
+                alt="image not found"
+              />
+              <Image
+                src={roomImage6}
+                className="w-full"
+                alt="image not found"
+              />
             </div>
           </div>
         </div>

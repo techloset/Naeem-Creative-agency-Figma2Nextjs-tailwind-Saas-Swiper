@@ -18,7 +18,12 @@ const Footer = () => {
         <Image
           src={curve}
           alt="curve"
-          className="w-full absolute top-44 -z-40"
+          className="w-full absolute top-40 -z-40"
+        />
+        <Image
+          src={curve}
+          alt="curve"
+          className="w-full absolute bottom-5 -z-40"
         />
         <div className="container mx-auto py-24 lg:py-[200px]">
           <div className="rounded-[20px] mx-3 text-white bg-exact-yellow text-center py-16">
