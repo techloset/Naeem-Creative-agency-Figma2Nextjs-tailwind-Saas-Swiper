@@ -25,10 +25,10 @@ const Footer = () => {
           alt="curve"
           className="w-full absolute bottom-5 -z-40"
         />
-        <div className="container mx-auto py-24 lg:py-[200px]">
-          <div className="rounded-[20px] mx-3 text-white bg-exact-yellow text-center py-16">
-            <p className="pb-4 text-base font-medium">Are You Ready For</p>
-            <h1 className="pb-8 text-[42px]">Start a New Project</h1>
+        <div className="mx-[24px] lg:mx-[80px] xl:mx-[160px] py-[100px] lg:py-[200px]">
+          <div className="rounded-[20px] text-white bg-exact-yellow text-center pt-16 pb-[84px]">
+            <p className="pb-2 md:pb-3 xl:pb-4 text-sm md:text-base font-medium">Are You Ready For</p>
+            <h1 className="pb-4 md:pb-6 xl:pb-8 text-[21px] md:text-8 xl:text-[42px] leading-7 xl:leading-[56px] font-semibold">Start a New Project</h1>
             <div className="flex justify-center">
               <button
                 className={`shadow-2xl shadow-exact-red/50 md:max-w-fit py-[19px] px-[42.5px] bg-[#4C40F7] rounded-xl `}
@@ -50,26 +50,26 @@ const Footer = () => {
 
         {/* Footer core section */}
         <div className="bg-[#00113B] mt-40">
-          <div className="container text-white mx-auto relative pt-40">
+          <div className="mx-[24px] lg:mx-[80px] xl:mx-[160px] text-white relative pt-40">
             {/* Subscribe section */}
             <div className="w-full mx-auto absolute -top-40">
-              <div className="text-center mx-3 rounded-[20px]  bg-[#4C40F7] py-16">
-                <p className="pb-4 text-base font-medium">
+              <div className="text-center rounded-[20px]  bg-[#4C40F7] pt-[60px] pb-[80px]">
+                <p className="pb-2 md:pb-3 xl:pb-4 text-sm md:text-base font-medium">
                   Get Notified About Project
                 </p>
-                <h1 className="pb-8 text-[42px]">Subscribe Now</h1>
+                <h1 className="pb-4 md:pb-6 xl:pb-8 text-[21px] md:text-8 xl:text-[42px] leading-7 xl:leading-[56px] font-semibold">Subscribe Now</h1>
                 <div className="flex justify-center">
                   <div className="flex justify-center text-black/75 items-center w-fit relative">
                     <input
                       type="email"
                       placeholder="Email"
                       maxLength={100}
-                      className="py-5 pl-7 pr-14 rounded-[11px] text-lg sm:w-[500px] w-full mx-3"
+                      className="py-5 pl-7 pr-14 rounded-[11px] text-lg leading-[32px] font-normal mx-5 md:w-[500px] w-full "
                     />
                     <Image
                       src={sendIcon}
                       alt="send-icon"
-                      className="w-[19px] h-[18px] absolute right-7"
+                      className="w-[19px] h-[18px] absolute right-12"
                     />
                   </div>
                 </div>
@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
 
             {/* map section */}
-            <div className="grid grid-cols-1 space-y-8 mx-3 gap-x-16 justify-between lg:grid-cols-10 mt-20 pb-16">
+            <div className="grid grid-cols-1 space-y-8  gap-x-16 justify-between lg:grid-cols-10 mt-20 pb-16">
               <div className="col-span-4 space-y-8">
                 <div className="p-3 w-12 bg-exact-purple rounded-lg shadow-[-5px_10px_30px_rgba(76,64,247,0.5)]">
                   <Image
@@ -117,7 +117,7 @@ const Footer = () => {
             {/* emty div for underliene */}
             <div className="border-[1px] mb-16 lg:mb-8"></div>
             {/* copy right section */}
-            <div className="flex lg:flex-row mx-3 space-y-8  flex-col justify-center lg:justify-between pb-[68px] text-base font-medium items-center">
+            <div className="flex lg:flex-row  space-y-8  flex-col justify-center lg:justify-between pb-[68px] text-base font-medium items-center">
               <p className="lg:mt-5">© 2021 Creative Agency</p>
               <ul className="flex space-x-4 lg:space-x-9">
                 <li>

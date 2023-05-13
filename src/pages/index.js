@@ -68,16 +68,17 @@ const Home = () => {
         <div className="absolute right-0 w-fit -z-40 invisible lg:visible">
           <Image src={bgHeroSec} alt="bgHeroSec" />
         </div>
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 px-3">
+        <div className="mx-[24px] lg:mx-[80px]  xl:mx-[160px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="space-y-6 xl:mt-28 my-20 dark:text-white">
-              <h1 className="text-4xl tracking-[-2.5px] lg:max-w-[570px] xl:text-6xl lg:text-[56px] lg:leading-[72px] font-semibold">
+              <h1 className="text-3xl md:text-[42px] md:leading-[52px] xl:text-[56px] xl:leading-[72px]
+               tracking-[-.8px] font-semibold">
                 Make your business
                 <span className="text-exact-orange dark:text-exact-yellow">
                   {" "}
                   more powerful{" "}
                 </span>
-                <br />
+               <br/>
                 with us
               </h1>
               <p className="text-lg leading-[32px] lg:max-w-[365px] font-normal text-exact-gray">
@@ -99,8 +100,8 @@ const Home = () => {
                 </span>
               </button>
             </div>
-            <div className="order-first lg:order-none">
-              <Image src={heroImage} className="lg:invisible" alt="heroImage" />
+            <div className="order-first lg:order-none w-full">
+              <Image src={heroImage} className="lg:invisible w-full" alt="heroImage" />
             </div>
           </div>
         </div>
@@ -113,12 +114,12 @@ const Home = () => {
         <div className="absolute right-0 -z-40 -bottom-56 invisible lg:visible">
           <Image src={bgService} alt="bgService" className="z-40" />
         </div>
-        <div className={`container mx-auto`}>
+        <div className={`mx-[24px] lg:mx-[80px]  xl:mx-[160px]`}>
           <SectionHeader
             title="Our Services"
             heading="The various services we provide to make your business more powerful"
           />
-          <div className="serviceCard grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center text-center gap-x-8 gap-y-[60px] px-3">
+          <div className="serviceCard grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center text-center gap-x-8 gap-y-[60px]">
             {serviceCardData.map((cardData, index) => {
               const { svgIcon, title, desc, exactColor } = cardData;
               const isStylish = stylish === index;
@@ -151,14 +152,14 @@ const Home = () => {
                     </div>
                     <div className="info space-y-4">
                       <h3
-                        className={`dark:text-white text-xl font-semibold ${
+                        className={`dark:text-white text-xl lg:text-lg xl:text-xl font-semibold ${
                           isStylish ? "text-white" : "text-black"
                         }`}
                       >
                         {title}
                       </h3>
                       <p
-                        className={`dark:text-white lg:max-w-[292px] text-lg leading-[32px] font-normal ${
+                        className={`dark:text-white lg:max-w-[292px] text-lg leading-[32px] lg:text-base xl:text-lg xl:leading-[32px] font-normal ${
                           isStylish
                             ? "text-white"
                             : "text-[#6B6B6B]                          "
@@ -197,16 +198,16 @@ const Home = () => {
       </div>
       {/* Documentation section */}
 
-      <div className={`docSec container mx-auto`}>
+      <div className={`docSec mx-[24px] lg:mx-[80px]  xl:mx-[160px]`}>
         <SectionHeader
           title="Our Documentation"
           heading="See what our profile is like and how we work for your business"
         />
       </div>
       <div
-        className={`ratingCard ${styles.bgDocSec} grid grid-cols-1 justify-center px-3`}
+        className={`videoSlideSec ${styles.bgDocSec} grid grid-cols-1 justify-center px-3`}
       >
-        <div className="flex justify-center container mx-auto">
+        <div className="flex justify-center mx-[24px] lg:mx-[80px]  xl:mx-[160px]">
           {thumnail ? (
             <div className="cursor-pointer" onClick={() => setThumnail(false)}>
               <Image src={thumnailImg} alt="image not found" width={15000} />
@@ -224,12 +225,12 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Customer section */}
-      <div className="customerSec mb-[100px] lg:mb-[200px] bg-[#F9F9FD] dark:bg-[#020E2D] py-24">
+      {/* Documentation worth section */}
+      <div className="worthSec mb-[100px] lg:mb-[200px] bg-[#F9F9FD] dark:bg-[#020E2D] py-24">
         <div
-          className={`container mx-auto gap-10 grid grid-col-1 lg:grid-cols-2 justify-center items-center`}
+          className={`mx-[24px] lg:mx-[80px]  xl:mx-[160px] gap-10 grid grid-col-1 lg:grid-cols-2 justify-center items-center`}
         >
-          <div className="grid mx-3 grid-cols-1 md:grid-cols-2 gap-10 justify-center">
+          <div className="grid  grid-cols-1 md:grid-cols-2 gap-10 justify-center">
             <div className="grid gap-10 md:mt-12">
               <CustomerCard
                 title="70K+"
@@ -256,7 +257,7 @@ const Home = () => {
             </div>
           </div>
           <div className="grid justify-center lg:justify-end">
-            <div className="space-y-9 max-w-[460px] mx-3">
+            <div className="space-y-9 max-w-[460px] ">
               <h1 className="text-3xl text-[#111029] dark:text-white md:text-5xl lg:text-[56px] lg:leading-[72px] font-semibold">
                 Customer satisfaction is our first priority
               </h1>
@@ -294,14 +295,14 @@ const Home = () => {
           className="w-full absolute -z-40 -bottom-80
           "
         />
-        <div className={`container mx-auto`}>
+        <div className={`mx-[24px] lg:mx-[80px]  xl:mx-[160px]`}>
           <SectionHeader
             title="Working space"
             heading="Let’s meet our interior room decoration"
           />
         </div>
-        <div className={`mx-3 mt-10`}>
-          <div className="container mx-auto gap-8 grid grid-cols-1 md:grid-cols-3">
+        <div className={` mt-10`}>
+          <div className="mx-[24px] lg:mx-[80px]  xl:mx-[160px] gap-8 grid grid-cols-1 md:grid-cols-3">
             <div className="space-y-8">
               <Image
                 src={roomImage1}
@@ -342,14 +343,14 @@ const Home = () => {
         </div>
       </div>
       {/* Customer section */}
-      <div className={`customersSec container mx-auto`}>
+      <div className={`customersSec mx-[24px] lg:mx-[80px]  xl:mx-[160px]`}>
         <SectionHeader
           title="Some of Our Great Customers"
           heading="Some of the companies we have worked with"
         />
         <div className=" md:pt-10 pb-20 lg:pb-[200px] space-y-11">
           <div
-            className="grid grid-cols-1 md:grid-cols-3 md:-mt-20 lg:-mt-10 lg:grid-cols-5 sm:justify-between mx-3 
+            className="grid grid-cols-1 md:grid-cols-3 md:-mt-20 lg:-mt-10 lg:grid-cols-5 sm:justify-between  
             justify-around
        lg:gap-y-[60px] lg:gap-x-20 md:gap-x-36 gap-x-auto
            space-y-11 lg:space-y-0"
@@ -392,7 +393,7 @@ const Home = () => {
       </div>
       {/* FAQ section */}
       <div className={`customersSec bg-top ${styles.bgFAQsec}`}>
-        <div className={`container  mx-auto lg:pt-[200px] pt-[100px]`}>
+        <div className={`mx-[24px] lg:mx-[80px] xl:mx-[160px] lg:pt-[200px] pt-[100px]`}>
           <SectionHeader
             title="Frequently Ask Question"
             heading="Some of our frequently asked questions"
@@ -404,7 +405,7 @@ const Home = () => {
                 : isActive.length == 0
                 ? "lg:pb-[300px]"
                 : "lg:pb-[200px]"
-            } px-2 space-y-8`}
+            }  space-y-8`}
           >
             {faqContent.map((item, index) => {
               return (
@@ -447,34 +448,34 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Testimonials section */}
+      {/* Testimonial section */}
       <div
-        className={`testimonialSec px-2 py-[100px] dark:bg-[#020E2D] bg-[#F9F9FD]`}
+        className={`testimonialSec py-[100px] dark:bg-[#020E2D] bg-[#F9F9FD]`}
       >
-        <div className={`container mx-auto `}>
+        <div className={`mx-[24px] lg:mx-[80px]  xl:mx-[160px]`}>
           <SectionHeader
             title="Testimonials"
             heading="Some testimonials from our customers"
           />
-          <div className={`grid grid-cols-1 lg:grid-cols-3 gap-[60px]`}>
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}>
             {testimonialsData.map((item, index) => {
               const { imgURL, name, company, desc, rating } = item;
               const items = [];
               for (let i = 0; i < rating; i++) {
                 items.push(
                   <div key={i}>
-                    <Image src={ratingStar} alt="star" className="w-4 h-4" />
+                    <Image src={ratingStar} alt="star" className="w-4 lg:w-3 xl:w-4 h-4 lg:h-3 xl:h-4" />
                   </div>
                 );
               }
               return (
                 <div
-                  className="pt-14"
+                  className="pt-14 flex justify-center"
                   onMouseEnter={() => setTestimonialStyle(index)}
                   key={index} // add key prop here
                 >
                   <div
-                    className={`tesimonialCard flex text-center flex-col items-center px-8 pb-11 scroll-pt-6 rounded-[20px] shadow-xl shadow- ${
+                    className={`tesimonialCard flex text-center max-w-[352px] flex-col items-center px-8 pb-11 scroll-pt-6 rounded-[20px] shadow-xl shadow- ${
                       testimonialStyle === index
                         ? "shadow-exact-purple/25"
                         : null
@@ -491,12 +492,12 @@ const Home = () => {
                       } `}
                     />
                     <div className="flex flex-col dark:text-white space-y-2 items-center">
-                      <h1 className="text-2xl">{name}</h1>
+                      <h1 className="text-2xl lg:text-lg xl:text-2xl font-semibold">{name}</h1>
                       <strong className="text-base font-medium dark:text-white text-[#ABAFC7]">
                         {company}
                       </strong>
                     </div>
-                    <p className="text-lg font-normal dark:text-white text-[#70798B]">
+                    <p className="text-lg leading-[32px] lg:text-base xl:text-lg xl:leading-[32px] font-normal dark:text-white text-[#70798B]">
                       {desc}
                     </p>
                     <div className="rating flex space-x-2.5">{items}</div>

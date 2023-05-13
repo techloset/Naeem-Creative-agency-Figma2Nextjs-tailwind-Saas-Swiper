@@ -32,17 +32,17 @@ const Navbar = () => {
         }`}
       >
         <nav
-          className={`container p-4 mx-auto flex flex-col md:flex-row justify-between items-center ${
-            !openMenu ? "h-20" : "h-screen"
-          } md:h-32`}
+          className={`mt-[24px] md:mt-[0px] mx-[24px] lg:mx-[80px]  xl:mx-[160px] flex flex-col md:flex-row justify-between items-center ${
+            !openMenu ? "h-[160px]" : "h-screen"
+          } `}
         >
           <div
             className={`flex w-full md:max-w-fit justify-between items-center ${
               openMenu ? "border-b-2" : "border-none"
             } border-black/25 dark:border-white pb-4 md:border-none `}
           >
-            <div className="p-3 mt-1 md:mt-4 bg-exact-purple rounded-lg shadow-[-5px_10px_30px_rgba(76,64,247,0.5)]">
-              <Image src={logo} alt="Logo" width={20} height={20} />
+            <div className="p-[14px] mt-1 md:mt-4 bg-[#4C40F7] rounded-lg shadow-[-5px_10px_30px_rgba(76,64,247,0.5)]">
+              <Image src={logo} alt="Logo" className="w-[20px] h-[20px]"/>
             </div>
 
             <div

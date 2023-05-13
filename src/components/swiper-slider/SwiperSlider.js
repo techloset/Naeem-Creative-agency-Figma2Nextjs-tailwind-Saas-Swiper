@@ -8,7 +8,7 @@ import CustomerSlide from "../costomer-slide/CustomerSlide";
 export default function SwiperSlider() {
   return (
     <>
-      <div className="relative container mx-auto">
+      <div className="relative mx-[24px] lg:mx-[80px]  xl:mx-[160px]">
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
