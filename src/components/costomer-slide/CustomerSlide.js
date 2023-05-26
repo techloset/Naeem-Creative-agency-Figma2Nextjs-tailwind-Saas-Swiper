@@ -4,16 +4,16 @@ import { VscArrowRight } from "react-icons/vsc";
 const CustomerSlide = (props) => {
   const { desc, title, desig } = props;
   return (
-    <div className="grid text-white space-y-11">
-      <div className="grid justify-center -mb-8">
+    <div className="grid text-white space-y-[44px]">
+      <div className="grid justify-center">
         <Image src={quotationMarks} alt="quoteMark"/>
       </div>
       <div className="grid justify-center">
-        <p className="text-lg md:text-2xl xl:text-[28px] xl:leading-10 font-normal text-white px-10 lg:w-[723px] text-center">
+        <p className="text-lg md:text-2xl xl:text-[28px] xl:leading-10 font-normal text-white lg:w-[723px] text-center">
           {desc}
         </p>
       </div>
-      <p className="text-lg md:text-xl lg:text-xl pb-10 text-center">
+      <p className="text-lg md:text-xl lg:text-xl pb-[34px] text-center">
         {title}
         <br />
         {desig}

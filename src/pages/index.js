@@ -65,23 +65,25 @@ const Home = () => {
       <div
         className={`heroSection bg-bottom pb-[100px] lg:pb-[200px] bg-no-repeat lg:bg-none`}
       >
-        <div className="absolute right-0 w-fit -z-40 invisible lg:visible">
+        <div className="absolute lg:right-0 w-fit -z-40 invisible lg:visible">
           <Image src={bgHeroSec} alt="bgHeroSec" />
         </div>
         <div className="mx-[24px] lg:mx-[80px]  xl:mx-[160px]">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="space-y-6 xl:mt-28 my-20 dark:text-white">
-              <h1 className="text-3xl md:text-[42px] md:leading-[52px] xl:text-[56px] xl:leading-[72px]
-               tracking-[-.8px] font-semibold">
+            <div className="space-y-6 xl:mt-[80px] my-20 dark:text-white">
+              <h1
+                className="text-3xl md:text-[42px] md:leading-[52px] xl:text-[56px] xl:leading-[72px]
+               tracking-[-0.8px] font-semibold"
+              >
                 Make your business
                 <span className="text-exact-orange dark:text-exact-yellow">
                   {" "}
                   more powerful{" "}
                 </span>
-               <br/>
+                <br />
                 with us
               </h1>
-              <p className="text-lg leading-[32px] lg:max-w-[365px] font-normal text-exact-gray">
+              <p className="text-lg leading-[32px] lg:max-w-[370px] font-normal text-exact-gray">
                 We provide various services to make your business grow and get
                 bigger. Your satisfaction is our first priority.
               </p>
@@ -101,7 +103,11 @@ const Home = () => {
               </button>
             </div>
             <div className="order-first lg:order-none w-full">
-              <Image src={heroImage} className="lg:invisible w-full" alt="heroImage" />
+              <Image
+                src={heroImage}
+                className="lg:invisible w-full"
+                alt="heroImage"
+              />
             </div>
           </div>
         </div>
@@ -226,7 +232,7 @@ const Home = () => {
       </div>
 
       {/* Documentation worth section */}
-      <div className="worthSec mb-[100px] lg:mb-[200px] bg-[#F9F9FD] dark:bg-[#020E2D] py-24">
+      <div className="worthSec mb-[100px] lg:mb-[200px] bg-[#F9F9FD] dark:bg-[#020E2D] py-[99px]">
         <div
           className={`mx-[24px] lg:mx-[80px]  xl:mx-[160px] gap-10 grid grid-col-1 lg:grid-cols-2 justify-center items-center`}
         >
@@ -261,7 +267,7 @@ const Home = () => {
               <h1 className="text-3xl text-[#111029] dark:text-white md:text-5xl lg:text-[56px] lg:leading-[72px] font-semibold">
                 Customer satisfaction is our first priority
               </h1>
-              <p className="text-lg dark:text-white text-exact-gray">
+              <p className="text-lg dark:text-white font-normal text-exact-gray">
                 We serve many customers, ranging from small businesses, medium
                 entrepreneurs, to world-renowned companies. Their satisfaction
                 is our pleasure. We strive to provide the best service by:
@@ -393,7 +399,9 @@ const Home = () => {
       </div>
       {/* FAQ section */}
       <div className={`customersSec bg-top ${styles.bgFAQsec}`}>
-        <div className={`mx-[24px] lg:mx-[80px] xl:mx-[160px] lg:pt-[200px] pt-[100px]`}>
+        <div
+          className={`mx-[24px] lg:mx-[80px] xl:mx-[160px] lg:pt-[200px] pt-[100px]`}
+        >
           <SectionHeader
             title="Frequently Ask Question"
             heading="Some of our frequently asked questions"
@@ -421,7 +429,7 @@ const Home = () => {
                         : "border-none"
                     }`}
                   >
-                    <h1 className="dark:text-white text-sm lg:text-base">
+                    <h1 className="dark:text-white font-medium text-sm lg:text-base">
                       {item.q}
                     </h1>
                     <Image
@@ -437,7 +445,7 @@ const Home = () => {
                       isActive?.indexOf(item.uid) > -1 ? "block" : "hidden"
                     } `}
                   >
-                    <p className="text-[#6B6B6B] text-sm lg:text-base dark:text-white/75">
+                    <p className="text-[#6B6B6B] text-sm lg:text-lg lg:leading-8 font-normal dark:text-white/75">
                       {item.ans}
                     </p>
                   </div>
@@ -457,14 +465,20 @@ const Home = () => {
             title="Testimonials"
             heading="Some testimonials from our customers"
           />
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}
+          >
             {testimonialsData.map((item, index) => {
               const { imgURL, name, company, desc, rating } = item;
               const items = [];
               for (let i = 0; i < rating; i++) {
                 items.push(
                   <div key={i}>
-                    <Image src={ratingStar} alt="star" className="w-4 lg:w-3 xl:w-4 h-4 lg:h-3 xl:h-4" />
+                    <Image
+                      src={ratingStar}
+                      alt="star"
+                      className="w-4 lg:w-3 xl:w-4 h-4 lg:h-3 xl:h-4"
+                    />
                   </div>
                 );
               }
@@ -492,7 +506,9 @@ const Home = () => {
                       } `}
                     />
                     <div className="flex flex-col dark:text-white space-y-2 items-center">
-                      <h1 className="text-2xl lg:text-lg xl:text-2xl font-semibold">{name}</h1>
+                      <h1 className="text-2xl lg:text-lg xl:text-2xl font-semibold">
+                        {name}
+                      </h1>
                       <strong className="text-base font-medium dark:text-white text-[#ABAFC7]">
                         {company}
                       </strong>

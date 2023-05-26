@@ -6,7 +6,7 @@ const ListIcon = (props) => {
   return (
     <li className="flex items-center">
       <Image src={checkmark} alt="Icon" className="lg:w-[27px] w-5 lg:h-[27px] h-5 mr-6" />
-      <p className="text-base lg:text-lg">{props.content}</p>
+      <p className="text-base font-normal lg:text-lg">{props.content}</p>
     </li>
   );
 };
