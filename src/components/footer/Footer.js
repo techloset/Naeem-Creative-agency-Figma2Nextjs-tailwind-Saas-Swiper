@@ -84,10 +84,12 @@ const Footer = () => {
 
             {/* map section */}
             <div className="grid grid-cols-1 space-y-8  gap-x-16 justify-between lg:grid-cols-10 mt-20 pb-11">
-              <div className="col-span-4 space-y-8">
-                <div className="p-3 w-fit bg-exact-purple rounded-lg shadow-[-5px_10px_30px_rgba(76,64,247,0.5)]">
-                  <Image src={logo} alt="Logo" className="w-5 h-5" />
-                </div>
+              <div className="col-span-4">
+                <Image
+                  src={logo}
+                  alt="Logo"
+                  className="relative top-2 -left-9"
+                />
                 <p className="text-base max-w-[365px] font-medium opacity-75">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.

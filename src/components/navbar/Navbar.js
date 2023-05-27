@@ -26,13 +26,9 @@ const Navbar = () => {
         />
       </Head>
 
-      <div
-        className={`bg-center ${
-          openMenu ? styles.bgNavbar : null
-        }`}
-      >
+      <div className={`bg-center ${openMenu ? styles.bgNavbar : null}`}>
         <nav
-          className={`mt-[24px] md:mt-[0px] mx-[24px] lg:mx-[80px]  xl:mx-[160px] flex flex-col md:flex-row justify-between items-center ${
+          className={`mx-[24px] lg:mx-[80px]  xl:mx-[160px] flex flex-col md:flex-row justify-between items-center ${
             !openMenu ? "h-[160px]" : "h-screen"
           } `}
         >
@@ -41,9 +37,11 @@ const Navbar = () => {
               openMenu ? "border-b-2" : "border-none"
             } border-black/25 dark:border-white pb-4 md:border-none `}
           >
-            <div className="p-[14px] mt-1 md:mt-4 bg-[#4C40F7] rounded-lg shadow-[-5px_10px_30px_rgba(76,64,247,0.5)]">
-              <Image src={logo} alt="Logo" className="w-[20px] h-[20px]"/>
-            </div>
+            <Image
+              src={logo}
+              alt="Logo"
+              className="relative top-4 -left-8"
+            />
 
             <div
               onClick={() => setOpenMenu(openMenu === false ? true : false)}
