@@ -9,7 +9,7 @@ const CustomerSlide = (props) => {
         <Image src={quotationMarks} alt="quoteMark"/>
       </div>
       <div className="grid justify-center">
-        <p className="text-lg md:text-2xl xl:text-[28px] xl:leading-10 font-normal text-white lg:w-[723px] text-center">
+        <p className="text-lg md:text-2xl xl:text-[28px] xl:leading-10 font-normal px-4 text-white lg:w-[723px] text-center">
           {desc}
         </p>
       </div>
