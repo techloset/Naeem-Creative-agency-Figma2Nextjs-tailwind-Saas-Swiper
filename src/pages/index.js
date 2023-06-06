@@ -22,6 +22,7 @@ import logo10 from "../assests/images/customer-logos/philips.png";
 import curve from "../assests/images/curve.png";
 import bgHeroSec from "../assests/images/bg-hero-section.png";
 import bgService from "../assests/images/bg-service.png";
+import bgDocSec from "../assests/images/bg-doc-section.png";
 import Image from "next/image";
 import SectionHeader from "@/components/sectionHeader/SectionHeading";
 import { serviceCardData } from "@/contents/serviceCardData";
@@ -38,8 +39,6 @@ import { testimonialsData } from "@/contents/testimonialsData";
 const Home = () => {
   const [stylish, setStylish] = useState(0);
   const [testimonialStyle, setTestimonialStyle] = useState(0);
-  // embed youtube video function on puse and play
-  const [thumnail, setThumnail] = useState(true);
 
   // Accordion drop down menu function start
   const [isActive, setIsActive] = useState(["one"]);
@@ -83,8 +82,9 @@ const Home = () => {
                 <br />
                 with us
               </h1>
-              <p className="text-lg leading-[32px] lg:max-w-[370px] font-normal text-exact-gray">
-                We provide various services to make your business grow and get
+              <p className="text-lg leading-[32px] lg:!w-[380px] !font-normal text-exact-gray">
+                We provide various services to make{" "}
+                <br className="hidden xl:inline" /> your business grow and get
                 bigger. Your satisfaction is our first priority.
               </p>
               <button
@@ -153,7 +153,7 @@ const Home = () => {
                         } w-[33px] h-[33px]`}
                         viewBox="0 0 33 33"
                       >
-                        {svgIcon}
+                        {svgIcon}servie
                       </svg>
                     </div>
                     <div className="info space-y-4">
@@ -166,9 +166,7 @@ const Home = () => {
                       </h3>
                       <p
                         className={`dark:text-white lg:max-w-[292px] text-lg leading-[32px] lg:text-base xl:text-lg xl:leading-[32px] font-normal ${
-                          isStylish
-                            ? "text-white"
-                            : "text-[#6B6B6B]                          "
+                          isStylish ? "text-white" : "text-[#6B6B6B]"
                         }`}
                       >
                         {desc}
@@ -211,30 +209,22 @@ const Home = () => {
         />
       </div>
       <div
-        className={`videoSlideSec ${styles.bgDocSec} grid grid-cols-1 justify-center px-3`}
+        className={`videoSlideSec relative grid grid-cols-1 w-full justify-center`}
       >
-        <div className="flex justify-center mx-[24px] lg:mx-[80px]  xl:mx-[160px]">
-          {thumnail ? (
-            <div className="cursor-pointer" onClick={() => setThumnail(false)}>
-              <Image src={thumnailImg} alt="image not found" width={15000} />
-            </div>
-          ) : (
-            <div className="w-full cursor-pointer">
-              <iframe
-                className={`w-full aspect-video ${
-                  thumnail ? "hidden" : "block"
-                } rounded-[20px] mb-16 lg:mb-20`}
-                src="https://www.youtube.com/embed/TGzMSOhdNtQ?autoplay=1&mute=1"
-              ></iframe>
-            </div>
-          )}
+        <Image src={bgDocSec} alt="image not found" className="w-full" />
+        <div className="flex justify-center absolute top-2 mx-[24px] lg:mx-[80px]  xl:mx-[160px]">
+          <Image
+            src={thumnailImg}
+            alt="image not found"
+            className="w-[5000px]"
+          />
         </div>
       </div>
 
       {/* Documentation worth section */}
-      <div className="worthSec mb-[100px] lg:mb-[200px] bg-[#F9F9FD] dark:bg-[#020E2D] py-[99px]">
+      <div className="worthSec lg:mb-[200px] bg-[#F9F9FD] dark:bg-[#020E2D] py-[105px]">
         <div
-          className={`mx-[24px] lg:mx-[80px]  xl:mx-[160px] gap-10 grid grid-col-1 lg:grid-cols-2 justify-center items-center`}
+          className={`mx-[24px] lg:mx-[80px]  xl:mx-[160px] flex flex-col lg:flex-row gap-y-10 space-x-10 justify-between items-center`}
         >
           <div className="grid  grid-cols-1 md:grid-cols-2 gap-10 justify-center">
             <div className="grid gap-10 md:mt-12">
@@ -262,6 +252,7 @@ const Home = () => {
               />
             </div>
           </div>
+
           <div className="grid justify-center lg:justify-end">
             <div className="space-y-9 max-w-[460px] ">
               <h1 className="text-3xl text-[#111029] dark:text-white md:text-5xl lg:text-[56px] lg:leading-[72px] font-semibold">
@@ -290,6 +281,7 @@ const Home = () => {
       <div
         className={`servicesSection relative lg:pb-[200px] pb-[100px] bg-bottom`}
       >
+        {/* bg curve */}
         <Image
           src={curve}
           alt="curve"
@@ -307,8 +299,8 @@ const Home = () => {
             heading="Let’s meet our interior room decoration"
           />
         </div>
-        <div className={` mt-10`}>
-          <div className="mx-[24px] lg:mx-[80px]  xl:mx-[160px] gap-8 grid grid-cols-1 md:grid-cols-3">
+        <div className={`mt-10`}>
+          <div className="mx-[24px] lg:mx-[80px] xl:mx-[160px] gap-8 grid grid-cols-1 md:grid-cols-3">
             <div className="space-y-8">
               <Image
                 src={roomImage1}
@@ -445,7 +437,7 @@ const Home = () => {
                       isActive?.indexOf(item.uid) > -1 ? "block" : "hidden"
                     } `}
                   >
-                    <p className="text-[#6B6B6B] text-sm lg:text-lg lg:leading-8 font-normal dark:text-white/75">
+                    <p className="text-[#6B6B6B] font-normal text-sm lg:text-lg lg:leading-8 dark:text-white/75">
                       {item.ans}
                     </p>
                   </div>

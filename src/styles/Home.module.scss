@@ -1,13 +1,3 @@
-.bgService {
-  background: url(../assests/images/bg-global.png) no-repeat;
-  background-size: 100%;
-  background-position: bottom;
-}
-.bgDocSec {
-  background: url(../assests/images/bg-doc-section.png) no-repeat;
-  background-size: 100%;
-  background-position: top;
-}
 .bgFAQsec {
   background: url(../assests/images/bg-FAQ-section.png) no-repeat;
   background-size: 100%;
@@ -15,11 +5,6 @@
 }
 
 @media only screen and (max-width: 1023px) {
-  .bgHero {
-    background: url(../assests/images/sm-bg-hero-section.png) no-repeat;
-    background-size: 100%;
-    background-position: bottom;
-  }
   .bgfaqGroup {
     background: url(../assests/images/sm-bg-hero-section.png) no-repeat;
     background-size: 100%;
